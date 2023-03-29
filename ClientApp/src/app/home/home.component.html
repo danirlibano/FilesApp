@@ -1,0 +1,18 @@
+<h1 id="tableLabel">File List</h1>
+
+<p *ngIf="!fileList?.length"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="fileList.length">
+  <thead>
+    <tr>
+      <th>File Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let file of fileList">
+      <td>{{ file.name }}</td>
+    </tr>
+
+    <app-counter-component></app-counter-component>
+  </tbody>
+</table>
